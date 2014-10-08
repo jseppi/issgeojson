@@ -1,0 +1,17 @@
+{
+  "name": "issgeojson",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.9.5",
+    "geojson": "^0.2.0",
+    "request": "^2.45.0"
+  }
+}
