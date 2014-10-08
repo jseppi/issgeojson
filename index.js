@@ -1,10 +1,12 @@
 var geojson = require('geojson');
 var request = require('request');
 var express = require('express');
+var cors = require('cors');
 
 var ISS_API_URL = "http://api.wheretheiss.at/v1/satellites/25544";
 
 var app = express();
+app.use(cors());
 
 app.set('port', (process.env.PORT || 5000));
 
