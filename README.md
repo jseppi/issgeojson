@@ -8,3 +8,7 @@ Requires node
 
 `npm install` to install dependencies
 `npm start` to start local server
+
+## License
+
+ISC
