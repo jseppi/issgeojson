@@ -14,16 +14,16 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
 app.get('/', function (req, res) {
   request(ISS_API_URL, function (err, resp, body) {
-  	if (err) {
-  		console.log(err);
-  	  res.status(400).json({error: 'Unable to contact ISS API'});
-  	  return
-  	}
+    if (err) {
+      console.log(err);
+      res.status(400).json({error: 'Unable to contact ISS API'});
+      return;
+    }
 
-  	var issStatus = JSON.parse(body);
-  	var issGj = geojson.parse([issStatus], {Point: ['latitude', 'longitude']});
+    var issStatus = JSON.parse(body);
+    var issGj = geojson.parse([issStatus], {Point: ['latitude', 'longitude']});
 
-  	res.json(issGj);
+    res.json(issGj);
 
   });
 });
